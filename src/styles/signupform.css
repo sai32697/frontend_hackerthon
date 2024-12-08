@@ -1,0 +1,187 @@
+/* signupform.css */
+.signup-form-container {
+    background: #ffffff;
+    padding: 30px 50px;
+    border-radius: 12px;
+    text-align: center;
+    width: 450px;
+    border: 4px solid #b48c61;
+    margin: 50px auto; /* Centered with a little margin from top */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.signup-form-container:hover {
+    transform: translateY(-10px); /* Floating effect on hover */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+h2 {
+    font-family: 'Georgia', serif;
+    font-size: 32px; /* Increased font size */
+    color: #5a3d2a;
+    margin-bottom: 10px;
+}
+
+.error-message,
+.success-message {
+    padding: 10px;
+    margin-bottom: 10px; /* Reduced bottom margin */
+    border-radius: 6px;
+    font-size: 18px; /* Increased font size */
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-group {
+    margin-bottom: 10px; /* Reduced bottom margin */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+label {
+    font-size: 16px; /* Increased font size */
+    color: #333;
+    font-weight: bold;
+    width: 200px; /* Adjust width as needed */
+}
+
+input,
+textarea,
+select {
+    width: calc(100% - 130px); /* Adjust to make space for label */
+    padding: 12px; /* Reduced padding */
+    margin-top: 5px;
+    margin-bottom: 10px; /* Reduced bottom margin */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fef8f3;
+    font-size: 16px; /* Increased font size */
+    transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth transition for focus */
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+button.submit-btn {
+    width: 100%;
+    padding: 12px; /* Reduced padding */
+    border: none;
+    border-radius: 6px;
+    background-color: #5a3d2a;
+    color: white;
+    font-size: 18px; /* Increased font size */
+    cursor: pointer;
+}
+
+button.submit-btn:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+select {
+    background-color: #fef8f3;
+    color: #333;
+    font-size: 16px; /* Increased font size */
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #7a6b64;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    font-size: 16px; /* Increased font size */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    color: #333;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border-color: #b48c61;
+    outline: none;
+    background-color: #fff8e1; /* Subtle background highlight on focus */
+}
+
+select:focus {
+    border-color: #b48c61;
+    outline: none;
+    background-color: #fff8e1; /* Subtle background highlight on focus */
+}
+
+input[type="radio"] {
+    margin-top: 5px; /* Reduced margin-top */
+    margin-right: 5px;
+}
+
+input[type="checkbox"] {
+    margin-top: 5px; /* Reduced margin-top */
+}
+
+.form-group label,
+.form-group select {
+    display: block;
+    margin-bottom: 3px; /* Reduced bottom margin */
+}
+
+.form-group input[type="radio"],
+.form-group input[type="checkbox"] {
+    margin-top: 5px; /* Reduced margin-top */
+    margin-bottom: 5px; /* Reduced bottom margin */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-top: 5px; /* Reduced margin-top */
+    margin-right: 5px;
+}
+
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+    background-color: #b48c61;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .signup-form-container {
+        width: 90%; /* Auto scale on smaller screens */
+        padding: 20px; /* Reduced padding for smaller screens */
+    }
+
+    label {
+        width: 100%; /* Adjust label width for small screens */
+        margin-bottom: 8px;
+    }
+
+    input,
+    textarea,
+    select {
+        width: 100%; /* Make inputs full width */
+    }
+
+    .form-group {
+        flex-direction: column; /* Stack inputs vertically */
+        align-items: flex-start;
+    }
+}
